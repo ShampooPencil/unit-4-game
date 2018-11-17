@@ -17,6 +17,10 @@ var newMainPoints;
 var myVar;
 var clear_my_var;
 
+var playAudio = function playRubee(){
+    x.play();
+}
+
 function stupidfunct() {
     
     if(newMainPoints === game.mainRandomNum){
@@ -78,8 +82,8 @@ function stupidfunct() {
     
     $(document).ready(function(){
         $("#blueRupee").click(function(){
-            var coinSound = new Audio();
-            coinSound.src = "unit-4-game-master/assets/IMAGES/LOZ_Get_Rupee.mp3";
+            $("#rupeeSound")[0].play();
+            $("#winOrLose").text("");
             game.main_Points += game.blueRupee;
             newMainPoints = game.main_Points;
             document.getElementById("points").innerHTML = newMainPoints;
@@ -89,8 +93,8 @@ function stupidfunct() {
 
         });
         $("#greenRupee").click(function(){
-            var coinSound = new Audio();
-            coinSound.src = "unit-4-game-master/assets/IMAGES/LOZ_Get_Rupee.mp3";
+            $("#greenSound")[0].play();
+            $("#winOrLose").text("");
             game.main_Points += game.greenRupee;
             newMainPoints = game.main_Points;
             document.getElementById("points").innerHTML = newMainPoints;
@@ -100,8 +104,8 @@ function stupidfunct() {
            
         });
         $("#purpleRupee").click(function(){
-            var coinSound = new Audio();
-            coinSound.src = "unit-4-game-master/assets/IMAGES/LOZ_Get_Rupee.mp3";
+            $("#purpleSound")[0].play();
+            $("#winOrLose").text("");
             game.main_Points += game.purpleRupee;
             newMainPoints = game.main_Points;
             document.getElementById("points").innerHTML = newMainPoints;
@@ -110,8 +114,8 @@ function stupidfunct() {
             stupidfunct();
         });
         $("#redRupee").click(function(){
-            var coinSound = new Audio();
-            coinSound.src = "unit-4-game-master/assets/IMAGES/LOZ_Get_Rupee.mp3";
+            $("#redSound")[0].play();
+            $("#winOrLose").text("");
             game.main_Points += game.redRupee;
             newMainPoints = game.main_Points;
             document.getElementById("points").innerHTML = newMainPoints;
